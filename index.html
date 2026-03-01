@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="title">My personal page</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== شريط التنقل ===== -->
+    <nav>
+
+
+        <h2 class="logo">الملف الشخصي</h2>
+        <ul class="nav-links">
+            <li><a href="#about">نبذة عني</a></li>
+            <li><a href="#skills">مهاراتي</a></li>
+            <li><a href="#projects">مشاريعي</a></li>
+            <li><a href="#contact">توصل </a></li> <!-- زر الوضع الليلي -->
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+
+        </ul>
+        <a id="langBtn" href="../in English/index-EN.html">العربي</a>
+
+
+
+    </nav>
+
+
+    <!-- ===== الهيدر ===== -->
+    <header class="hero">
+        <h1 data-lang="name">منى عادل </h1>
+        <p class="title" job">طالبة هندسة تقنية معلومات</p>
+    </header>
+
+    <!-- ===== نبذة ===== -->
+    <section id="about" class="section">
+        <h2>نبذة عني</h2>
+        <p>
+            أنا طالبة تقنية معلومات مهتمة بتطوير الويب وتصميم الواجهات.
+            أحب بناء مواقع احترافية وتجربة تقنيات جديدة.
+        </p>
+    </section>
+
+    <!-- ===== مهارات ===== -->
+    <section id="skills" class="section">
+        <h2 data-lang="skills">مهاراتي</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Database</li>
+        </ul>
+    </section>
+
+    <!-- ===== مشاريع ===== -->
+    <section id="projects" class="section">
+        <h2>مشاريعي</h2>
+        <div class="projects-container">
+
+            <div class="card">
+                <h3>مشروع موقع مطعم</h3>
+                <p>موقع لعرض قائمة الطعام مع نظام طلب.</p>
+            </div>
+
+            <div class="card">
+                <h3>مشروع قاعدة بيانات</h3>
+                <p>تصميم قاعدة بيانات لبنك مع علاقات وجداول.</p>
+            </div>
+
+            <div class="card">
+                <h3>موقع أنمي</h3>
+                <p>موقع يعرض أنميات مع نظام تقييم.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== تواصل ===== -->
+    <section id="contact" class="section">
+        <h2>تواصل معي</h2>
+        <form class="contact-form">
+            <label>الاسم</label>
+            <input type="text" placeholder="اكتب اسمك">
+
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="example@email.com">
+
+            <label>رسالتك</label>
+            <textarea placeholder="اكتب رسالتك"></textarea>
+
+            <button type="submit" class="send-btn">إرسال</button>
+        </form>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer>
+        <p>© 2026 جميع الحقوق منى محفوظة</p>
+    </footer>
+
+
+</body>
+
+</html>

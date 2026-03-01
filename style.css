@@ -1,0 +1,378 @@
+/* =========================
+   إعدادات عامة + متغيرات الألوان
+========================= */
+:root {
+  --lavender-light: #E6E6FA;
+  --dark-gray: #333;
+  --white: #fff;
+  --lavender-dark: #967BB6;
+  --light-gray: #F5F5F5;
+}
+
+/* وضع ليلي */
+.dark-mode {
+  --white: #1a1a1a;
+  --dark-gray: #f1f1f1;
+  --light-gray: #2a2a2a;
+  --lavender-light: #2d2438;
+  /* خلفية بنفسجي غامق */
+  --lavender-dark: #bfa6e0;
+  /* بنفسجي فاتح للنصوص */
+}
+
+/* إزالة المسافات الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* تنسيق الصفحة */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--white);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  transition: 0.4s;
+  /* حركة ناعمة عند تغيير الثيم */
+}
+
+
+/* =========================
+   شريط التنقل
+========================= */
+
+nav {
+  background: var(--lavender-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+
+  /* ظل خفيف */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* اسم الموقع */
+.logo {
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+/* حركة عند المرور */
+.logo:hover {
+  transform: scale(1.1);
+}
+
+
+/* روابط التنقل */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  position: relative;
+}
+
+/* خط متحرك تحت الرابط */
+.nav-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--lavender-dark);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* أزرار التحكم */
+.controls button {
+  margin-left: 10px;
+}
+
+
+/* =========================
+   الهيرو
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: var(--lavender-light);
+
+  /* حركة ظهور */
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+/* =========================
+   الأقسام العامة
+========================= */
+
+.section {
+  padding: 70px 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* خلفية متناوبة */
+.section:nth-child(even) {
+  background: var(--light-gray);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* خط جمالي تحت العنوان */
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--lavender-dark);
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   المهارات
+========================= */
+
+.skills-list {
+  list-style: none;
+}
+
+.skills-list li {
+  background: var(--lavender-light);
+  margin: 12px auto;
+  padding: 12px;
+  width: 220px;
+  border-radius: 8px;
+
+  /* حركة */
+  transition: 0.3s;
+}
+
+/* تأثير hover */
+.skills-list li:hover {
+  transform: translateY(-5px);
+  background: var(--lavender-dark);
+  color: white;
+}
+
+
+/* =========================
+   المشاريع
+========================= */
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+
+  /* ظل */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s;
+}
+
+/* حركة عند المرور */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+
+/* =========================
+   نموذج التواصل
+========================= */
+
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* تأثير عند الكتابة */
+input:focus,
+textarea:focus {
+  border-color: var(--lavender-dark);
+  outline: none;
+  box-shadow: 0 0 8px rgba(150, 123, 182, 0.3);
+}
+
+
+/* زر الإرسال */
+.send-btn {
+  width: 100%;
+}
+
+
+/* =========================
+   الأزرار العامة
+========================= */
+button {
+  background: var(--lavender-dark);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* تأثير hover */
+button:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+
+/* =========================
+   الفوتر
+========================= */
+
+footer {
+  background: var(--lavender-dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+#langBtn {
+  text-decoration: none;
+  color: black;
+}
+
+/* ===== الوضع الليلي بدون JS ===== */
+
+/* تصميم الزر */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* السلايدر */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* عند التبديل */
+input:checked+.slider {
+  background-color: #333;
+}
+
+input:checked+.slider::before {
+  transform: translateX(26px);
+}
+
+/* ===== ثيم الوضع الليلي ===== */
+body {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.4s;
+}
+
+input:checked~body,
+input:checked~* {
+  background-color: #111;
+  /* خلفية داكنة */
+  color: #eee;
+  /* نص أبيض */
+}
+
+/* تطبيق الوضع الليلي على كل العناصر */
+input:checked~nav,
+input:checked~section,
+input:checked~footer {
+  background-color: #222;
+  color: #eee;
+}
